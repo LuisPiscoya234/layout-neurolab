@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > * {
+    width: 100%;
+    min-height: 225px;
+}
+
+main {
+    flex-grow: 1;
+}
+footer {
+    background: blue;
+}
+
+
+/* HEADER */
+#header {
+    position: relative;
+}
+#header > nav {
+    position: relative;
+    padding-top: 18px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    padding-top: 1.75rem;
+}
+#header > nav > * {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: white;
+    font-size: 24px;
+}
+#header > nav img.logo {
+    margin: auto;
+    width: 170px;
+    height: 45px;
+}
+
+
+/* Posicionamiento del video en el Header */
+.container-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.container-video video {
+    width: 100%;
+}

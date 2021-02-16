@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ancho real = width xk sino el ancho real = width + padding x 2 */
+}
+
+.padre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    border: 5px solid red;
+    height: 600px;
+}
+
+.hijo {
+    color: white;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hijo:nth-child(1) {
+    background: coral;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+.hijo:nth-child(2) {
+    background: blueviolet;
+}
+.hijo:nth-child(3) {
+    background: orange;
+}
+.hijo:nth-child(4) {
+    background: blue;
+}
+.hijo:nth-child(5) {
+    background: red;
+}
+.hijo:nth-child(6) {
+    background: pink;
+    grid-row: 1 / 2;
+    grid-column-start: 1 / 2;
+}
+
+@media (max-width: 900px) {
+    .padre {
+        background: yellow;
+    }
+}
+@media (max-width: 700px) {
+    .padre {
+        background: green;
+    }
+}
+@media (max-width: 500px) {
+    .padre {
+        background: black;
+    }
+}
+
+/* 
+SELECTORES
+    - clase = .
+    - id = #
+    - etiqueta = etiqueta
+    - 
+Display:
+    none
+    
+    block
+    inline
+    inline-block
+    
+    flex (flexbox)
+    grid
+*/
+
+/* 
+Display por defecto:
+display: block;
+    div
+    h1->h6
+    p
+
+display: inline;
+    span
+    a
+    img
+*/
